@@ -1,7 +1,7 @@
-#include <iostream>
+#include "CatnipApi.h"
 
 int main()
 {
-    std::cout << "CATNIP API" << std::endl;
+    CatnipApi().Run();
     return 0;
 }
