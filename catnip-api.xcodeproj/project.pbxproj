@@ -11,6 +11,8 @@
 		1193A6D01F7A40550005619B /* RestServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6CE1F7A40550005619B /* RestServer.cpp */; };
 		1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6D21F7A419A0005619B /* SimpleServer.cpp */; };
 		1193A6D81F7A44CF0005619B /* CatnipApi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6D61F7A44CF0005619B /* CatnipApi.cpp */; };
+		1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6D91F7A571B0005619B /* HttpRequest.cpp */; };
+		1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,10 @@
 		1193A6D51F7A41F20005619B /* SimpleServerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleServerDelegate.h; sourceTree = "<group>"; };
 		1193A6D61F7A44CF0005619B /* CatnipApi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CatnipApi.cpp; sourceTree = "<group>"; };
 		1193A6D71F7A44CF0005619B /* CatnipApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatnipApi.h; sourceTree = "<group>"; };
+		1193A6D91F7A571B0005619B /* HttpRequest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequest.cpp; sourceTree = "<group>"; };
+		1193A6DA1F7A571B0005619B /* HttpRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HttpHeaders.cpp; sourceTree = "<group>"; };
+		1193A6DD1F7A57AA0005619B /* HttpHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHeaders.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 			children = (
 				1193A6CE1F7A40550005619B /* RestServer.cpp */,
 				1193A6CF1F7A40550005619B /* RestServer.h */,
+				1193A6D91F7A571B0005619B /* HttpRequest.cpp */,
+				1193A6DA1F7A571B0005619B /* HttpRequest.h */,
+				1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */,
+				1193A6DD1F7A57AA0005619B /* HttpHeaders.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -152,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
+				1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */,
 				1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */,
 				1193A6C71F7A3E860005619B /* main.cpp in Sources */,
 				1193A6D81F7A44CF0005619B /* CatnipApi.cpp in Sources */,
