@@ -15,6 +15,9 @@
 		1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */; };
 		2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */; };
 		2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */; };
+		2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */; };
+		2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */; };
+		2F6AD3431F7AAAE200D72AA0 /* HttpResponseTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +51,13 @@
 		2F6AD3351F7A88E900D72AA0 /* HttpRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestMethod.h; sourceTree = "<group>"; };
 		2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequestMethodTranslator.cpp; sourceTree = "<group>"; };
 		2F6AD3381F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestMethodTranslator.h; sourceTree = "<group>"; };
+		2F6AD33A1F7AA6BC00D72AA0 /* HttpStatusCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpStatusCode.h; sourceTree = "<group>"; };
+		2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpStatusCodeTranslator.cpp; sourceTree = "<group>"; };
+		2F6AD33C1F7AA73600D72AA0 /* HttpStatusCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpStatusCodeTranslator.h; sourceTree = "<group>"; };
+		2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpResponse.cpp; sourceTree = "<group>"; };
+		2F6AD33F1F7AA8CD00D72AA0 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
+		2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpResponseTranslator.cpp; sourceTree = "<group>"; };
+		2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponseTranslator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,13 @@
 				2F6AD3351F7A88E900D72AA0 /* HttpRequestMethod.h */,
 				2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */,
 				2F6AD3381F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.h */,
+				2F6AD33A1F7AA6BC00D72AA0 /* HttpStatusCode.h */,
+				2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */,
+				2F6AD33C1F7AA73600D72AA0 /* HttpStatusCodeTranslator.h */,
+				2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */,
+				2F6AD33F1F7AA8CD00D72AA0 /* HttpResponse.h */,
+				2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */,
+				2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -174,12 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */,
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
 				1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */,
+				2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */,
 				2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */,
 				2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */,
 				1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */,
+				2F6AD3431F7AAAE200D72AA0 /* HttpResponseTranslator.cpp in Sources */,
 				1193A6C71F7A3E860005619B /* main.cpp in Sources */,
 				1193A6D81F7A44CF0005619B /* CatnipApi.cpp in Sources */,
 			);

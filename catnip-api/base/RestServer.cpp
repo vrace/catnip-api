@@ -1,5 +1,6 @@
 #include "RestServer.h"
 #include "HttpRequestTranslator.h"
+#include "HttpResponseTranslator.h"
 #include <memory>
 
 RestServer::RestServer()
@@ -10,5 +11,11 @@ RestServer::RestServer()
 std::string RestServer::Dispatch(const std::string &request)
 {
     auto httpRequest = std::unique_ptr<HttpRequest>(HttpRequestTranslator::Translate(request));
-    return "";
+    
+    return HttpResponseTranslator::Translate(BadRequest());
+}
+
+HttpResponse RestServer::BadRequest()
+{
+    return HttpResponse(HttpStatusCode::BAD_REQUEST, HttpHeaders());
 }

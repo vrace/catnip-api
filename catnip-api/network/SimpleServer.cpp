@@ -59,21 +59,18 @@ void SimpleServer::Start()
         char buf[4096];
         auto clientfd = accept(listenfd, nullptr, nullptr);
         
-        for (;;)
+        auto recvsize = recv(clientfd, buf, sizeof(buf), 0);
+        
+        if (recvsize > 0)
         {
-            auto recvsize = recv(clientfd, buf, sizeof(buf), 0);
-            
-            if (recvsize > 0)
-            {
-                auto request = std::string(buf, recvsize);
-                auto response = _delegate->RequestReceived(request);
-                send(clientfd, response.c_str(), response.length(), 0);
-            }
-            else
-            {
-                // either connection closed or socket error
-                break;
-            }
+            auto request = std::string(buf, recvsize);
+            auto response = _delegate->RequestReceived(request);
+            send(clientfd, response.c_str(), response.length(), 0);
+        }
+        else
+        {
+            // either connection closed or socket error
+            break;
         }
         
         close(clientfd);
