@@ -1,4 +1,6 @@
 #include "RestServer.h"
+#include "HttpRequestTranslator.h"
+#include <memory>
 
 RestServer::RestServer()
 {
@@ -7,5 +9,6 @@ RestServer::RestServer()
 
 std::string RestServer::Dispatch(const std::string &request)
 {
-    return "RestServer Dispatched";
+    auto httpRequest = std::unique_ptr<HttpRequest>(HttpRequestTranslator::Translate(request));
+    return "";
 }

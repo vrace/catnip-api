@@ -8,6 +8,8 @@ class HttpHeaders : public std::map<std::string, std::string>
 {
 public:
     HttpHeaders();
+    
+    bool Append(const std::string &header);
 };
 
 #endif

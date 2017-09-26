@@ -1,11 +1,17 @@
 #include "HttpRequest.h"
 
-HttpRequest::HttpRequest(const std::string &url, const HttpHeaders &headers, const std::string &body)
-: _url(url)
+HttpRequest::HttpRequest(HttpRequestMethod method, const std::string &url, const HttpHeaders &headers, const std::string &body)
+: _method(method)
+, _url(url)
 , _headers(headers)
 , _body(body)
 {
     
+}
+
+HttpRequestMethod HttpRequest::GetMethod() const
+{
+    return _method;
 }
 
 const std::string& HttpRequest::GetURL() const
