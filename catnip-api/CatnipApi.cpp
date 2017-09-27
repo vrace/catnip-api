@@ -18,6 +18,7 @@ void CatnipApi::Run()
     _server.AddController("/version", versionController);
     _server.AddController("/image", imageController);
     _server.AddController("/appearance", mockJsonController);
+    _server.AddController("/moment", mockJsonController);
     
     _network.Start();
 }
