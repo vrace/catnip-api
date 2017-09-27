@@ -18,7 +18,7 @@ std::string HttpResponseTranslator::Translate(const HttpResponse &response)
     
     ss << CRLF;
     
-    auto &payload = response.GetPayload();
+    auto &payload = response.GetPayload().GetBody();
     if (!payload.empty())
         ss << payload << CRLF;
     

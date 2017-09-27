@@ -3,22 +3,23 @@
 
 #include "HttpStatusCode.h"
 #include "HttpHeaders.h"
+#include "HttpResponsePayload.h"
 
 class HttpResponse
 {
 public:
     HttpResponse(HttpStatusCode status, const HttpHeaders &headers);
-    HttpResponse(HttpStatusCode status, const HttpHeaders &headers, const std::string &payload);
+    HttpResponse(HttpStatusCode status, const HttpHeaders &headers, const HttpResponsePayload &payload);
     
     HttpStatusCode GetStatus() const;
     HttpHeaders& GetHeaders();
     const HttpHeaders& GetHeaders() const;
-    const std::string& GetPayload() const;
+    const HttpResponsePayload& GetPayload() const;
     
 private:
     HttpStatusCode _status;
     HttpHeaders _headers;
-    std::string _payload;
+    HttpResponsePayload _payload;
 };
 
 #endif

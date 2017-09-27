@@ -8,6 +8,7 @@ enum class HttpStatusCode
     
     // 400 series
     BAD_REQUEST,
+    NOT_FOUND,
     
     // 500 series
     INTERNAL_SERVER_ERROR
