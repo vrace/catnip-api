@@ -20,7 +20,7 @@ std::string HttpResponseTranslator::Translate(const HttpResponse &response)
     
     auto &payload = response.GetPayload().GetBody();
     if (!payload.empty())
-        ss << payload << CRLF;
+        ss << payload;
     
     return ss.str();
 }

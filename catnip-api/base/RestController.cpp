@@ -5,7 +5,7 @@ RestController::RestController()
     
 }
 
-HttpResponse* RestController::HandleRequest(const HttpRequest &request)
+std::unique_ptr<HttpResponse> RestController::HandleRequest(const HttpRequest &request)
 {
-    return nullptr;
+    return std::unique_ptr<HttpResponse>();
 }

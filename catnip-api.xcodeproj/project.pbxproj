@@ -15,6 +15,7 @@
 		1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */; };
 		1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6DF1F7B3FC10005619B /* RestController.cpp */; };
 		1193A6E51F7B464D0005619B /* HttpResponsePayload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E31F7B464D0005619B /* HttpResponsePayload.cpp */; };
+		1193A6E81F7B69910005619B /* VersionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E61F7B69910005619B /* VersionController.cpp */; };
 		2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */; };
 		2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */; };
 		2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */; };
@@ -52,6 +53,8 @@
 		1193A6E01F7B3FC10005619B /* RestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestController.h; sourceTree = "<group>"; };
 		1193A6E31F7B464D0005619B /* HttpResponsePayload.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HttpResponsePayload.cpp; sourceTree = "<group>"; };
 		1193A6E41F7B464D0005619B /* HttpResponsePayload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpResponsePayload.h; sourceTree = "<group>"; };
+		1193A6E61F7B69910005619B /* VersionController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VersionController.cpp; sourceTree = "<group>"; };
+		1193A6E71F7B69910005619B /* VersionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionController.h; sourceTree = "<group>"; };
 		2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequestTranslator.cpp; sourceTree = "<group>"; };
 		2F6AD3321F7A848B00D72AA0 /* HttpRequestTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestTranslator.h; sourceTree = "<group>"; };
 		2F6AD3351F7A88E900D72AA0 /* HttpRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestMethod.h; sourceTree = "<group>"; };
@@ -109,28 +112,28 @@
 		1193A6CD1F7A402F0005619B /* base */ = {
 			isa = PBXGroup;
 			children = (
-				1193A6CE1F7A40550005619B /* RestServer.cpp */,
-				1193A6CF1F7A40550005619B /* RestServer.h */,
-				1193A6D91F7A571B0005619B /* HttpRequest.cpp */,
-				1193A6DA1F7A571B0005619B /* HttpRequest.h */,
 				1193A6DC1F7A57AA0005619B /* HttpHeaders.cpp */,
 				1193A6DD1F7A57AA0005619B /* HttpHeaders.h */,
-				2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */,
-				2F6AD3321F7A848B00D72AA0 /* HttpRequestTranslator.h */,
+				1193A6D91F7A571B0005619B /* HttpRequest.cpp */,
+				1193A6DA1F7A571B0005619B /* HttpRequest.h */,
 				2F6AD3351F7A88E900D72AA0 /* HttpRequestMethod.h */,
 				2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */,
 				2F6AD3381F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.h */,
+				2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */,
+				2F6AD3321F7A848B00D72AA0 /* HttpRequestTranslator.h */,
+				2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */,
+				2F6AD33F1F7AA8CD00D72AA0 /* HttpResponse.h */,
+				1193A6E31F7B464D0005619B /* HttpResponsePayload.cpp */,
+				1193A6E41F7B464D0005619B /* HttpResponsePayload.h */,
+				2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */,
+				2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */,
 				2F6AD33A1F7AA6BC00D72AA0 /* HttpStatusCode.h */,
 				2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */,
 				2F6AD33C1F7AA73600D72AA0 /* HttpStatusCodeTranslator.h */,
-				2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */,
-				2F6AD33F1F7AA8CD00D72AA0 /* HttpResponse.h */,
-				2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */,
-				2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */,
 				1193A6DF1F7B3FC10005619B /* RestController.cpp */,
 				1193A6E01F7B3FC10005619B /* RestController.h */,
-				1193A6E31F7B464D0005619B /* HttpResponsePayload.cpp */,
-				1193A6E41F7B464D0005619B /* HttpResponsePayload.h */,
+				1193A6CE1F7A40550005619B /* RestServer.cpp */,
+				1193A6CF1F7A40550005619B /* RestServer.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -148,6 +151,8 @@
 		1193A6E21F7B433F0005619B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1193A6E61F7B69910005619B /* VersionController.cpp */,
+				1193A6E71F7B69910005619B /* VersionController.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */,
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
+				1193A6E81F7B69910005619B /* VersionController.cpp in Sources */,
 				1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */,
 				2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */,
 				2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */,

@@ -17,7 +17,7 @@ void RestServer::AddController(const std::string &requestMapping, RestController
 
 std::string RestServer::Dispatch(const std::string &request)
 {
-    auto httpRequest = std::unique_ptr<HttpRequest>(HttpRequestTranslator::Translate(request));
+    auto httpRequest = HttpRequestTranslator::Translate(request);
     
     if (!httpRequest)
         return Prepare(HttpResponse(HttpStatusCode::BAD_REQUEST, HttpHeaders()));
@@ -26,9 +26,9 @@ std::string RestServer::Dispatch(const std::string &request)
     
     for (auto &mapping : _requestMappings)
     {
-        if (httpRequest->GetURL().find(mapping.first + "/") == 0)
+        if (httpRequest->GetURL() == mapping.first || httpRequest->GetURL().find(mapping.first + "/") == 0)
         {
-            auto response = std::unique_ptr<HttpResponse>(mapping.second->HandleRequest(*httpRequest));
+            auto response = mapping.second->HandleRequest(*httpRequest);
             if (response)
                 return Prepare(*response);
         }

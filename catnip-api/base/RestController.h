@@ -3,12 +3,13 @@
 
 #include "HttpRequest.h"
 #include "HttpResponse.h"
+#include <memory>
 
 class RestController
 {
 public:
     RestController();
-    virtual HttpResponse* HandleRequest(const HttpRequest &request);
+    virtual std::unique_ptr<HttpResponse> HandleRequest(const HttpRequest &request);
 };
 
 #endif

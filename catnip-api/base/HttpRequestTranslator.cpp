@@ -21,7 +21,7 @@ namespace
     }
 }
 
-HttpRequest* HttpRequestTranslator::Translate(const std::string &request)
+std::unique_ptr<HttpRequest> HttpRequestTranslator::Translate(const std::string &request)
 {
     std::stringstream lineReader(request);
     std::string line;
@@ -41,5 +41,5 @@ HttpRequest* HttpRequestTranslator::Translate(const std::string &request)
     payloadss << lineReader.rdbuf();
     auto payload = payloadss.str();
     
-    return new HttpRequest(requestMethod, requestUrl, headers, payload);
+    return std::make_unique<HttpRequest>(requestMethod, requestUrl, headers, payload);
 }

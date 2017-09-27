@@ -14,7 +14,7 @@
 
 namespace
 {
-    addrinfo* GetServerAddrInfo()
+    std::unique_ptr<addrinfo, decltype(&freeaddrinfo)> GetServerAddrInfo()
     {
         addrinfo hint, *info;
         
@@ -27,7 +27,19 @@ namespace
         
         getaddrinfo(NULL, "17123", &hint, &info);
         
-        return info;
+        return std::unique_ptr<addrinfo, decltype(&freeaddrinfo)>(info, freeaddrinfo);
+    }
+    
+    int InitServer()
+    {
+        auto info = GetServerAddrInfo();
+        
+        auto listenfd = socket(info->ai_family, info->ai_socktype, info->ai_protocol);
+        bind(listenfd, info->ai_addr, info->ai_addrlen);
+        
+        listen(listenfd, SOMAXCONN);
+        
+        return listenfd;
     }
 }
 
@@ -46,12 +58,7 @@ void SimpleServer::Start()
 {
     assert(_delegate);
     
-    auto info = std::unique_ptr<addrinfo, decltype(&freeaddrinfo)>(GetServerAddrInfo(), freeaddrinfo);
-    
-    auto listenfd = socket(info->ai_family, info->ai_socktype, info->ai_protocol);
-    bind(listenfd, info->ai_addr, info->ai_addrlen);
-    
-    listen(listenfd, SOMAXCONN);
+    auto listenfd = InitServer();
     _delegate->ServerStarted();
     
     for(;;)
