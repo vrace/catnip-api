@@ -2,8 +2,6 @@
 #define IMAGE_CONTROLLER_H
 
 #include "../base/RestController.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 class ImageController : public RestController
 {

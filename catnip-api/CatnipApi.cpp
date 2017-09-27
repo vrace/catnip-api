@@ -1,6 +1,7 @@
 #include "CatnipApi.h"
 #include "controller/VersionController.h"
 #include "controller/ImageController.h"
+#include "controller/MockJsonController.h"
 #include <iostream>
 
 CatnipApi::CatnipApi()
@@ -12,9 +13,11 @@ void CatnipApi::Run()
 {
     VersionController versionController;
     ImageController imageController;
+    MockJsonController mockJsonController;
     
     _server.AddController("/version", versionController);
     _server.AddController("/image", imageController);
+    _server.AddController("/appearance", mockJsonController);
     
     _network.Start();
 }
