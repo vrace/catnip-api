@@ -8,6 +8,7 @@
 class HttpResponse
 {
 public:
+    HttpResponse(HttpStatusCode status);
     HttpResponse(HttpStatusCode status, const HttpHeaders &headers);
     HttpResponse(HttpStatusCode status, const HttpHeaders &headers, const HttpResponsePayload &payload);
     

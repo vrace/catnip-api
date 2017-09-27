@@ -1,5 +1,6 @@
 #include "CatnipApi.h"
 #include "controller/VersionController.h"
+#include "controller/ImageController.h"
 #include <iostream>
 
 CatnipApi::CatnipApi()
@@ -10,7 +11,11 @@ CatnipApi::CatnipApi()
 void CatnipApi::Run()
 {
     VersionController versionController;
+    ImageController imageController;
+    
     _server.AddController("/version", versionController);
+    _server.AddController("/image", imageController);
+    
     _network.Start();
 }
 

@@ -1,6 +1,12 @@
 #include "HttpResponse.h"
 #include <sstream>
 
+HttpResponse::HttpResponse(HttpStatusCode status)
+: _status(status)
+{
+    _headers["Content-Length"] = "0";
+}
+
 HttpResponse::HttpResponse(HttpStatusCode status, const HttpHeaders &headers)
 : _status(status)
 , _headers(headers)
