@@ -18,6 +18,7 @@
 		1193A6E81F7B69910005619B /* VersionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E61F7B69910005619B /* VersionController.cpp */; };
 		1193A6EB1F7B86160005619B /* ImageController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E91F7B86160005619B /* ImageController.cpp */; };
 		1193A6EE1F7B997A0005619B /* MockJsonController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6EC1F7B997A0005619B /* MockJsonController.cpp */; };
+		1193A6F11F7C8EC70005619B /* StaticHtmlController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */; };
 		2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */; };
 		2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3371F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp */; };
 		2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */; };
@@ -61,6 +62,8 @@
 		1193A6EA1F7B86160005619B /* ImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
 		1193A6EC1F7B997A0005619B /* MockJsonController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MockJsonController.cpp; sourceTree = "<group>"; };
 		1193A6ED1F7B997A0005619B /* MockJsonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockJsonController.h; sourceTree = "<group>"; };
+		1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticHtmlController.cpp; sourceTree = "<group>"; };
+		1193A6F01F7C8EC70005619B /* StaticHtmlController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticHtmlController.h; sourceTree = "<group>"; };
 		2F6AD3311F7A848B00D72AA0 /* HttpRequestTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequestTranslator.cpp; sourceTree = "<group>"; };
 		2F6AD3321F7A848B00D72AA0 /* HttpRequestTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestTranslator.h; sourceTree = "<group>"; };
 		2F6AD3351F7A88E900D72AA0 /* HttpRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestMethod.h; sourceTree = "<group>"; };
@@ -157,12 +160,14 @@
 		1193A6E21F7B433F0005619B /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1193A6E61F7B69910005619B /* VersionController.cpp */,
-				1193A6E71F7B69910005619B /* VersionController.h */,
 				1193A6E91F7B86160005619B /* ImageController.cpp */,
 				1193A6EA1F7B86160005619B /* ImageController.h */,
 				1193A6EC1F7B997A0005619B /* MockJsonController.cpp */,
 				1193A6ED1F7B997A0005619B /* MockJsonController.h */,
+				1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */,
+				1193A6F01F7C8EC70005619B /* StaticHtmlController.h */,
+				1193A6E61F7B69910005619B /* VersionController.cpp */,
+				1193A6E71F7B69910005619B /* VersionController.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */,
+				1193A6F11F7C8EC70005619B /* StaticHtmlController.cpp in Sources */,
 				1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */,
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,

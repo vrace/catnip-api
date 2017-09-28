@@ -2,6 +2,7 @@
 #define REST_SERVER_H
 
 #include "HttpResponse.h"
+#include "HttpRequest.h"
 #include "RestController.h"
 
 #include <string>
@@ -17,6 +18,8 @@ public:
     
 private:
     std::string Prepare(const HttpResponse &response);
+    std::string Fallback(const HttpRequest &request);
+    std::string SimpleResponse(HttpStatusCode status);
     
 private:
     std::map<std::string, RestController*> _requestMappings;

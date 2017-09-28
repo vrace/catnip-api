@@ -20,7 +20,7 @@ std::string RestServer::Dispatch(const std::string &request)
     auto httpRequest = HttpRequestTranslator::Translate(request);
     
     if (!httpRequest)
-        return Prepare(HttpResponse(HttpStatusCode::BAD_REQUEST));
+        return SimpleResponse(HttpStatusCode::BAD_REQUEST);
     
     std::cout << httpRequest->GetMethod() << " " << httpRequest->GetURL() << std::endl;
     
@@ -33,11 +33,24 @@ std::string RestServer::Dispatch(const std::string &request)
                 return Prepare(*response);
         }
     }
-        
-    return Prepare(HttpResponse(HttpStatusCode::NOT_FOUND));
+    
+    return Fallback(*httpRequest);
+}
+
+std::string RestServer::Fallback(const HttpRequest &request)
+{
+    if (request.GetMethod() == HttpRequestMethod::GET)
+        return SimpleResponse(HttpStatusCode::NOT_FOUND);
+    
+    return SimpleResponse(HttpStatusCode::BAD_REQUEST);
 }
 
 std::string RestServer::Prepare(const HttpResponse &response)
 {
     return HttpResponseTranslator::Translate(response);
+}
+
+std::string RestServer::SimpleResponse(HttpStatusCode status)
+{
+    return Prepare(HttpResponse(status));
 }
