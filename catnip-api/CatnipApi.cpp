@@ -1,8 +1,7 @@
 #include "CatnipApi.h"
 #include "controller/VersionController.h"
-#include "controller/ImageController.h"
 #include "controller/MockJsonController.h"
-#include "controller/StaticHtmlController.h"
+#include "controller/StaticResourceController.h"
 #include <iostream>
 
 CatnipApi::CatnipApi()
@@ -13,15 +12,13 @@ CatnipApi::CatnipApi()
 void CatnipApi::Run()
 {
     VersionController versionController;
-    ImageController imageController;
     MockJsonController mockJsonController;
-    StaticHtmlController staticHtmlController;
+    StaticResourceController staticResourceController;
     
     _server.AddRequestMapping(RequestMapping("/version", versionController));
     _server.AddRequestMapping(RequestMapping("/appearance", mockJsonController));
     _server.AddRequestMapping(RequestMapping("/moment", mockJsonController));
-    _server.AddRequestMapping(RequestMapping("/image", imageController));
-    _server.AddRequestMapping(RequestMapping("", staticHtmlController));
+    _server.AddRequestMapping(RequestMapping("", staticResourceController));
     
     _network.Start();
 }

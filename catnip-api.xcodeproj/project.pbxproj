@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		117B356B1F7F89F80090C162 /* RequestMapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B35691F7F89F80090C162 /* RequestMapping.cpp */; };
+		117B356E1F7F8E1A0090C162 /* StaticResourceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B356C1F7F8E1A0090C162 /* StaticResourceController.cpp */; };
 		1193A6C71F7A3E860005619B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6C61F7A3E860005619B /* main.cpp */; };
 		1193A6D01F7A40550005619B /* RestServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6CE1F7A40550005619B /* RestServer.cpp */; };
 		1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6D21F7A419A0005619B /* SimpleServer.cpp */; };
@@ -17,9 +18,7 @@
 		1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6DF1F7B3FC10005619B /* RestController.cpp */; };
 		1193A6E51F7B464D0005619B /* HttpResponsePayload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E31F7B464D0005619B /* HttpResponsePayload.cpp */; };
 		1193A6E81F7B69910005619B /* VersionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E61F7B69910005619B /* VersionController.cpp */; };
-		1193A6EB1F7B86160005619B /* ImageController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6E91F7B86160005619B /* ImageController.cpp */; };
 		1193A6EE1F7B997A0005619B /* MockJsonController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6EC1F7B997A0005619B /* MockJsonController.cpp */; };
-		1193A6F11F7C8EC70005619B /* StaticHtmlController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */; };
 		11A564371F7D0826004A529E /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11A564351F7D0826004A529E /* Path.cpp */; };
 		11B3E5DC1F7CFD9500A31C0A /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E5DA1F7CFD9500A31C0A /* FileUtils.cpp */; };
 		11B3E5DF1F7D054600A31C0A /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E5DD1F7D054600A31C0A /* StringUtils.cpp */; };
@@ -45,6 +44,8 @@
 /* Begin PBXFileReference section */
 		117B35691F7F89F80090C162 /* RequestMapping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RequestMapping.cpp; sourceTree = "<group>"; };
 		117B356A1F7F89F80090C162 /* RequestMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMapping.h; sourceTree = "<group>"; };
+		117B356C1F7F8E1A0090C162 /* StaticResourceController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticResourceController.cpp; sourceTree = "<group>"; };
+		117B356D1F7F8E1A0090C162 /* StaticResourceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticResourceController.h; sourceTree = "<group>"; };
 		1193A6C31F7A3E860005619B /* catnip-api */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "catnip-api"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1193A6C61F7A3E860005619B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1193A6CE1F7A40550005619B /* RestServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RestServer.cpp; sourceTree = "<group>"; };
@@ -64,12 +65,8 @@
 		1193A6E41F7B464D0005619B /* HttpResponsePayload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpResponsePayload.h; sourceTree = "<group>"; };
 		1193A6E61F7B69910005619B /* VersionController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VersionController.cpp; sourceTree = "<group>"; };
 		1193A6E71F7B69910005619B /* VersionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionController.h; sourceTree = "<group>"; };
-		1193A6E91F7B86160005619B /* ImageController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImageController.cpp; sourceTree = "<group>"; };
-		1193A6EA1F7B86160005619B /* ImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
 		1193A6EC1F7B997A0005619B /* MockJsonController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MockJsonController.cpp; sourceTree = "<group>"; };
 		1193A6ED1F7B997A0005619B /* MockJsonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockJsonController.h; sourceTree = "<group>"; };
-		1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticHtmlController.cpp; sourceTree = "<group>"; };
-		1193A6F01F7C8EC70005619B /* StaticHtmlController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticHtmlController.h; sourceTree = "<group>"; };
 		11A564351F7D0826004A529E /* Path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		11A564361F7D0826004A529E /* Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		11B3E5DA1F7CFD9500A31C0A /* FileUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
@@ -175,14 +172,12 @@
 		1193A6E21F7B433F0005619B /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1193A6E91F7B86160005619B /* ImageController.cpp */,
-				1193A6EA1F7B86160005619B /* ImageController.h */,
 				1193A6EC1F7B997A0005619B /* MockJsonController.cpp */,
 				1193A6ED1F7B997A0005619B /* MockJsonController.h */,
-				1193A6EF1F7C8EC70005619B /* StaticHtmlController.cpp */,
-				1193A6F01F7C8EC70005619B /* StaticHtmlController.h */,
 				1193A6E61F7B69910005619B /* VersionController.cpp */,
 				1193A6E71F7B69910005619B /* VersionController.h */,
+				117B356C1F7F8E1A0090C162 /* StaticResourceController.cpp */,
+				117B356D1F7F8E1A0090C162 /* StaticResourceController.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -258,16 +253,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */,
-				1193A6F11F7C8EC70005619B /* StaticHtmlController.cpp in Sources */,
 				1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */,
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				11B3E5DC1F7CFD9500A31C0A /* FileUtils.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
 				1193A6E81F7B69910005619B /* VersionController.cpp in Sources */,
+				117B356E1F7F8E1A0090C162 /* StaticResourceController.cpp in Sources */,
 				1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */,
 				2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */,
 				2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */,
-				1193A6EB1F7B86160005619B /* ImageController.cpp in Sources */,
 				2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */,
 				1193A6E51F7B464D0005619B /* HttpResponsePayload.cpp in Sources */,
 				1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */,
