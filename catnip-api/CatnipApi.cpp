@@ -17,11 +17,11 @@ void CatnipApi::Run()
     MockJsonController mockJsonController;
     StaticHtmlController staticHtmlController;
     
-    _server.AddController("/version", versionController);
-    _server.AddController("/image", imageController);
-    _server.AddController("/appearance", mockJsonController);
-    _server.AddController("/moment", mockJsonController);
-    _server.AddController("", staticHtmlController);
+    _server.AddRequestMapping(RequestMapping("/version", versionController));
+    _server.AddRequestMapping(RequestMapping("/appearance", mockJsonController));
+    _server.AddRequestMapping(RequestMapping("/moment", mockJsonController));
+    _server.AddRequestMapping(RequestMapping("/image", imageController));
+    _server.AddRequestMapping(RequestMapping("", staticHtmlController));
     
     _network.Start();
 }

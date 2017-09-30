@@ -4,16 +4,17 @@
 #include "HttpResponse.h"
 #include "HttpRequest.h"
 #include "RestController.h"
+#include "RequestMapping.h"
 
 #include <string>
-#include <map>
+#include <vector>
 
 class RestServer
 {
 public:
     RestServer();
     
-    void AddController(const std::string &requestMapping, RestController &controller);
+    void AddRequestMapping(const RequestMapping &requestMapping);
     std::string Dispatch(const std::string &request);
     
 private:
@@ -22,7 +23,7 @@ private:
     std::string SimpleResponse(HttpStatusCode status);
     
 private:
-    std::map<std::string, RestController*> _requestMappings;
+    std::vector<RequestMapping> _requestMappings;
 };
 
 #endif

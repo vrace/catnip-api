@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117B356B1F7F89F80090C162 /* RequestMapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B35691F7F89F80090C162 /* RequestMapping.cpp */; };
 		1193A6C71F7A3E860005619B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6C61F7A3E860005619B /* main.cpp */; };
 		1193A6D01F7A40550005619B /* RestServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6CE1F7A40550005619B /* RestServer.cpp */; };
 		1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1193A6D21F7A419A0005619B /* SimpleServer.cpp */; };
@@ -42,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		117B35691F7F89F80090C162 /* RequestMapping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RequestMapping.cpp; sourceTree = "<group>"; };
+		117B356A1F7F89F80090C162 /* RequestMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMapping.h; sourceTree = "<group>"; };
 		1193A6C31F7A3E860005619B /* catnip-api */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "catnip-api"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1193A6C61F7A3E860005619B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1193A6CE1F7A40550005619B /* RestServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RestServer.cpp; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				1193A6E01F7B3FC10005619B /* RestController.h */,
 				1193A6CE1F7A40550005619B /* RestServer.cpp */,
 				1193A6CF1F7A40550005619B /* RestServer.h */,
+				117B35691F7F89F80090C162 /* RequestMapping.cpp */,
+				117B356A1F7F89F80090C162 /* RequestMapping.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				1193A6C71F7A3E860005619B /* main.cpp in Sources */,
 				1193A6D81F7A44CF0005619B /* CatnipApi.cpp in Sources */,
 				11B3E5DF1F7D054600A31C0A /* StringUtils.cpp in Sources */,
+				117B356B1F7F89F80090C162 /* RequestMapping.cpp in Sources */,
 				1193A6EE1F7B997A0005619B /* MockJsonController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

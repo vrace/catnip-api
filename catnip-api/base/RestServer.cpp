@@ -10,9 +10,9 @@ RestServer::RestServer()
     
 }
 
-void RestServer::AddController(const std::string &requestMapping, RestController &controller)
+void RestServer::AddRequestMapping(const RequestMapping &requestMapping)
 {
-    _requestMappings[requestMapping] = &controller;
+    _requestMappings.push_back(requestMapping);
 }
 
 std::string RestServer::Dispatch(const std::string &request)
@@ -26,9 +26,9 @@ std::string RestServer::Dispatch(const std::string &request)
     
     for (auto &mapping : _requestMappings)
     {
-        if (httpRequest->GetURL() == mapping.first || httpRequest->GetURL().find(mapping.first + "/") == 0)
+        if (httpRequest->GetURL().find(mapping.GetMapping() + "/") == 0)
         {
-            auto response = mapping.second->HandleRequest(*httpRequest);
+            auto response = mapping.GetController().HandleRequest(*httpRequest);
             if (response)
                 return Prepare(*response);
         }
