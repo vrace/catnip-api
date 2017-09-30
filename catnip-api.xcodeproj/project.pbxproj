@@ -27,6 +27,11 @@
 		2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */; };
 		2F6AD3431F7AAAE200D72AA0 /* HttpResponseTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */; };
 		2F6AD34A1F7FD2F400D72AA0 /* CatnipApiConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3481F7FD2F400D72AA0 /* CatnipApiConfig.cpp */; };
+		2F6AD34E1F7FE24400D72AA0 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD34C1F7FE24400D72AA0 /* Image.cpp */; };
+		2F6AD3511F7FE3B300D72AA0 /* Appearance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD34F1F7FE3B300D72AA0 /* Appearance.cpp */; };
+		2F6AD3541F7FE5C300D72AA0 /* JsonUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3531F7FE5C300D72AA0 /* JsonUtils.cpp */; };
+		2F6AD3571F7FEB4100D72AA0 /* AppearanceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3551F7FEB4100D72AA0 /* AppearanceController.cpp */; };
+		2F6AD35A1F7FED6600D72AA0 /* HttpResponseUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3581F7FED6600D72AA0 /* HttpResponseUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +90,16 @@
 		2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponseTranslator.h; sourceTree = "<group>"; };
 		2F6AD3481F7FD2F400D72AA0 /* CatnipApiConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CatnipApiConfig.cpp; sourceTree = "<group>"; };
 		2F6AD3491F7FD2F400D72AA0 /* CatnipApiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatnipApiConfig.h; sourceTree = "<group>"; };
+		2F6AD34C1F7FE24400D72AA0 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		2F6AD34D1F7FE24400D72AA0 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		2F6AD34F1F7FE3B300D72AA0 /* Appearance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Appearance.cpp; sourceTree = "<group>"; };
+		2F6AD3501F7FE3B300D72AA0 /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
+		2F6AD3521F7FE50A00D72AA0 /* JsonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonUtils.h; sourceTree = "<group>"; };
+		2F6AD3531F7FE5C300D72AA0 /* JsonUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonUtils.cpp; sourceTree = "<group>"; };
+		2F6AD3551F7FEB4100D72AA0 /* AppearanceController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppearanceController.cpp; sourceTree = "<group>"; };
+		2F6AD3561F7FEB4100D72AA0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
+		2F6AD3581F7FED6600D72AA0 /* HttpResponseUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpResponseUtils.cpp; sourceTree = "<group>"; };
+		2F6AD3591F7FED6600D72AA0 /* HttpResponseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponseUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,14 +132,15 @@
 		1193A6C51F7A3E860005619B /* catnip-api */ = {
 			isa = PBXGroup;
 			children = (
-				2F6AD3441F7FD0FB00D72AA0 /* config */,
-				11B3E5D91F7CFD6B00A31C0A /* util */,
-				1193A6E21F7B433F0005619B /* controller */,
-				1193A6D11F7A41590005619B /* network */,
-				1193A6CD1F7A402F0005619B /* base */,
 				1193A6C61F7A3E860005619B /* main.cpp */,
 				1193A6D61F7A44CF0005619B /* CatnipApi.cpp */,
 				1193A6D71F7A44CF0005619B /* CatnipApi.h */,
+				1193A6CD1F7A402F0005619B /* base */,
+				2F6AD3441F7FD0FB00D72AA0 /* config */,
+				1193A6E21F7B433F0005619B /* controller */,
+				2F6AD34B1F7FE22700D72AA0 /* model */,
+				1193A6D11F7A41590005619B /* network */,
+				11B3E5D91F7CFD6B00A31C0A /* util */,
 			);
 			path = "catnip-api";
 			sourceTree = "<group>";
@@ -177,6 +193,8 @@
 				1193A6ED1F7B997A0005619B /* MockJsonController.h */,
 				117B356C1F7F8E1A0090C162 /* StaticResourceController.cpp */,
 				117B356D1F7F8E1A0090C162 /* StaticResourceController.h */,
+				2F6AD3551F7FEB4100D72AA0 /* AppearanceController.cpp */,
+				2F6AD3561F7FEB4100D72AA0 /* AppearanceController.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -190,6 +208,10 @@
 				11B3E5DE1F7D054600A31C0A /* StringUtils.h */,
 				11A564351F7D0826004A529E /* Path.cpp */,
 				11A564361F7D0826004A529E /* Path.h */,
+				2F6AD3531F7FE5C300D72AA0 /* JsonUtils.cpp */,
+				2F6AD3521F7FE50A00D72AA0 /* JsonUtils.h */,
+				2F6AD3581F7FED6600D72AA0 /* HttpResponseUtils.cpp */,
+				2F6AD3591F7FED6600D72AA0 /* HttpResponseUtils.h */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -201,6 +223,17 @@
 				2F6AD3491F7FD2F400D72AA0 /* CatnipApiConfig.h */,
 			);
 			path = config;
+			sourceTree = "<group>";
+		};
+		2F6AD34B1F7FE22700D72AA0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2F6AD34C1F7FE24400D72AA0 /* Image.cpp */,
+				2F6AD34D1F7FE24400D72AA0 /* Image.h */,
+				2F6AD34F1F7FE3B300D72AA0 /* Appearance.cpp */,
+				2F6AD3501F7FE3B300D72AA0 /* Appearance.h */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,12 +298,16 @@
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
 				2F6AD34A1F7FD2F400D72AA0 /* CatnipApiConfig.cpp in Sources */,
 				11B3E5DC1F7CFD9500A31C0A /* FileUtils.cpp in Sources */,
+				2F6AD3541F7FE5C300D72AA0 /* JsonUtils.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
 				117B356E1F7F8E1A0090C162 /* StaticResourceController.cpp in Sources */,
 				1193A6DE1F7A57AA0005619B /* HttpHeaders.cpp in Sources */,
+				2F6AD35A1F7FED6600D72AA0 /* HttpResponseUtils.cpp in Sources */,
 				2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */,
 				2F6AD3331F7A848B00D72AA0 /* HttpRequestTranslator.cpp in Sources */,
 				2F6AD3391F7A8EDD00D72AA0 /* HttpRequestMethodTranslator.cpp in Sources */,
+				2F6AD3511F7FE3B300D72AA0 /* Appearance.cpp in Sources */,
+				2F6AD3571F7FEB4100D72AA0 /* AppearanceController.cpp in Sources */,
 				1193A6E51F7B464D0005619B /* HttpResponsePayload.cpp in Sources */,
 				1193A6D41F7A419A0005619B /* SimpleServer.cpp in Sources */,
 				11A564371F7D0826004A529E /* Path.cpp in Sources */,
@@ -278,6 +315,7 @@
 				1193A6C71F7A3E860005619B /* main.cpp in Sources */,
 				1193A6D81F7A44CF0005619B /* CatnipApi.cpp in Sources */,
 				11B3E5DF1F7D054600A31C0A /* StringUtils.cpp in Sources */,
+				2F6AD34E1F7FE24400D72AA0 /* Image.cpp in Sources */,
 				117B356B1F7F89F80090C162 /* RequestMapping.cpp in Sources */,
 				1193A6EE1F7B997A0005619B /* MockJsonController.cpp in Sources */,
 			);

@@ -1,5 +1,6 @@
 #include "CatnipApiConfig.h"
 #include "../controller/MockJsonController.h"
+#include "../controller/AppearanceController.h"
 #include "../controller/StaticResourceController.h"
 
 RestServer& CatnipApiConfig::GetRestServer()
@@ -19,7 +20,7 @@ RestServer& CatnipApiConfig::GetRestServer()
 
 RestController& CatnipApiConfig::GetAppearanceController()
 {
-    static MockJsonController controller;
+    static AppearanceController controller;
     return controller;
 }
 
