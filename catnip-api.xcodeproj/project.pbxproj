@@ -26,6 +26,7 @@
 		2F6AD33D1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33B1F7AA73600D72AA0 /* HttpStatusCodeTranslator.cpp */; };
 		2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD33E1F7AA8CD00D72AA0 /* HttpResponse.cpp */; };
 		2F6AD3431F7AAAE200D72AA0 /* HttpResponseTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */; };
+		2F6AD34A1F7FD2F400D72AA0 /* CatnipApiConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AD3481F7FD2F400D72AA0 /* CatnipApiConfig.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +83,8 @@
 		2F6AD33F1F7AA8CD00D72AA0 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
 		2F6AD3411F7AAAE200D72AA0 /* HttpResponseTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpResponseTranslator.cpp; sourceTree = "<group>"; };
 		2F6AD3421F7AAAE200D72AA0 /* HttpResponseTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponseTranslator.h; sourceTree = "<group>"; };
+		2F6AD3481F7FD2F400D72AA0 /* CatnipApiConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CatnipApiConfig.cpp; sourceTree = "<group>"; };
+		2F6AD3491F7FD2F400D72AA0 /* CatnipApiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatnipApiConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		1193A6C51F7A3E860005619B /* catnip-api */ = {
 			isa = PBXGroup;
 			children = (
+				2F6AD3441F7FD0FB00D72AA0 /* config */,
 				11B3E5D91F7CFD6B00A31C0A /* util */,
 				1193A6E21F7B433F0005619B /* controller */,
 				1193A6D11F7A41590005619B /* network */,
@@ -190,6 +194,15 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		2F6AD3441F7FD0FB00D72AA0 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				2F6AD3481F7FD2F400D72AA0 /* CatnipApiConfig.cpp */,
+				2F6AD3491F7FD2F400D72AA0 /* CatnipApiConfig.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +263,7 @@
 				2F6AD3401F7AA8CD00D72AA0 /* HttpResponse.cpp in Sources */,
 				1193A6E11F7B3FC10005619B /* RestController.cpp in Sources */,
 				1193A6DB1F7A571B0005619B /* HttpRequest.cpp in Sources */,
+				2F6AD34A1F7FD2F400D72AA0 /* CatnipApiConfig.cpp in Sources */,
 				11B3E5DC1F7CFD9500A31C0A /* FileUtils.cpp in Sources */,
 				1193A6D01F7A40550005619B /* RestServer.cpp in Sources */,
 				117B356E1F7F8E1A0090C162 /* StaticResourceController.cpp in Sources */,

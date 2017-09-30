@@ -1,23 +1,18 @@
 #include "CatnipApi.h"
-#include "controller/MockJsonController.h"
-#include "controller/StaticResourceController.h"
+#include "network/SimpleServer.h"
+#include "config/CatnipApiConfig.h"
 #include <iostream>
 
 CatnipApi::CatnipApi()
 {
-    _network.SetDelegate(*this);
+    
 }
 
 void CatnipApi::Run()
 {
-    MockJsonController mockJsonController;
-    StaticResourceController staticResourceController;
-    
-    _server.AddRequestMapping(RequestMapping("/appearance", mockJsonController));
-    _server.AddRequestMapping(RequestMapping("/moment", mockJsonController));
-    _server.AddRequestMapping(RequestMapping("", staticResourceController));
-    
-    _network.Start();
+    SimpleServer network;
+    network.SetDelegate(*this);
+    network.Start();
 }
 
 void CatnipApi::ServerStarted()
@@ -27,5 +22,5 @@ void CatnipApi::ServerStarted()
 
 std::string CatnipApi::RequestReceived(const std::string &request)
 {
-    return _server.Dispatch(request);
+    return CatnipApiConfig::GetRestServer().Dispatch(request);
 }
