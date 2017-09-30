@@ -49,4 +49,10 @@ std::string ToJsonKeyArray(const std::string &key, const std::vector<T> &arr)
     return ss.str();
 }
 
+#define BEGIN_DEFINE_JSON() std::string ToJsonObject() const { bool first = true; std::stringstream ss; ss << "{";
+#define JSON_COMMA() if (!first) ss << ","; first = false;
+#define WITH_JSON_OBJECT(key,obj) JSON_COMMA(); ss << ::ToJsonKeyValue(key, obj);
+#define WITH_JSON_ARRAY(key,arr) JSON_COMMA(); ss << ::ToJsonKeyArray(key, arr);
+#define END_DEFINE_JSON() ss << "}"; return ss.str(); }
+
 #endif
