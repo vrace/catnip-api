@@ -2,7 +2,7 @@
 #define APPEARANCE_CONTROLLER_H
 
 #include "../base/RestController.h"
-#include "../model/Appearance.h"
+#include "../service/appearance/AppearanceService.h"
 
 class AppearanceController : public RestController
 {
@@ -11,7 +11,7 @@ public:
     std::unique_ptr<HttpResponse> HandleRequest(const HttpRequest &request) override;
     
 private:
-    Appearance GetAppearance();
+    AppearanceService *_service;
 };
 
 #endif
