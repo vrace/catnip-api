@@ -1,18 +1,16 @@
 #include "CatnipApi.h"
-#include "network/SimpleServer.h"
 #include "config/CatnipApiConfig.h"
 #include <iostream>
 
 CatnipApi::CatnipApi()
+: _server(CatnipApiConfig::GetRestServer())
 {
-    
+    _network.SetDelegate(*this);
 }
 
 void CatnipApi::Run()
 {
-    SimpleServer network;
-    network.SetDelegate(*this);
-    network.Start();
+    _network.Start();
 }
 
 void CatnipApi::ServerStarted()
@@ -22,5 +20,5 @@ void CatnipApi::ServerStarted()
 
 std::string CatnipApi::RequestReceived(const std::string &request)
 {
-    return CatnipApiConfig::GetRestServer().Dispatch(request);
+    return _server->Dispatch(request);
 }

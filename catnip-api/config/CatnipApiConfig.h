@@ -7,7 +7,7 @@
 class CatnipApiConfig
 {
 public:
-    static RestServer& GetRestServer();
+    static RestServer* GetRestServer();
     
 private:
     static RestController& GetAppearanceController();

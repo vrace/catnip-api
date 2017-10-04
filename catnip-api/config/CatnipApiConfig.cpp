@@ -3,7 +3,7 @@
 #include "../controller/AppearanceController.h"
 #include "../controller/StaticResourceController.h"
 
-RestServer& CatnipApiConfig::GetRestServer()
+RestServer* CatnipApiConfig::GetRestServer()
 {
     static RestServer *server;
     
@@ -15,7 +15,7 @@ RestServer& CatnipApiConfig::GetRestServer()
         server->AddRequestMapping(RequestMapping("", GetStaticResourceController()));
     }
     
-    return *server;
+    return server;
 }
 
 RestController& CatnipApiConfig::GetAppearanceController()
