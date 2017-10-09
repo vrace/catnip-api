@@ -49,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		113AC3F61F8B5A6000EAEE55 /* RequestMappingUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMappingUtils.h; sourceTree = "<group>"; };
 		117B35691F7F89F80090C162 /* RequestMapping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RequestMapping.cpp; sourceTree = "<group>"; };
 		117B356A1F7F89F80090C162 /* RequestMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestMapping.h; sourceTree = "<group>"; };
 		117B356C1F7F8E1A0090C162 /* StaticResourceController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StaticResourceController.cpp; sourceTree = "<group>"; };
@@ -220,6 +221,7 @@
 				2F6AD3521F7FE50A00D72AA0 /* JsonUtils.h */,
 				2F6AD3581F7FED6600D72AA0 /* HttpResponseUtils.cpp */,
 				2F6AD3591F7FED6600D72AA0 /* HttpResponseUtils.h */,
+				113AC3F61F8B5A6000EAEE55 /* RequestMappingUtils.h */,
 			);
 			path = util;
 			sourceTree = "<group>";

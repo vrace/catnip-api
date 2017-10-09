@@ -3,12 +3,16 @@
 
 #include "../base/RestController.h"
 #include "../service/appearance/AppearanceService.h"
+#include "../util/RequestMappingUtils.h"
 
 class AppearanceController : public RestController
 {
 public:
     AppearanceController();
-    std::unique_ptr<HttpResponse> HandleRequest(const HttpRequest &request) override;
+    
+    BEGIN_REQUEST_MAPPING()
+    ON_GET("/appearance/", [this] (const HttpRequest&) { return _service->GetAppearance(); })
+    END_REQUEST_MAPPING()
     
 private:
     AppearanceService *_service;

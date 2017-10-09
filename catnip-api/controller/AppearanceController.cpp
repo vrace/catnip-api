@@ -7,11 +7,3 @@ AppearanceController::AppearanceController()
 {
     
 }
-
-std::unique_ptr<HttpResponse> AppearanceController::HandleRequest(const HttpRequest &request)
-{
-    if (request.GetMethod() == HttpRequestMethod::GET && request.GetURL() == "/appearance/")
-        return HttpResponseUtils::JsonResponse(_service->GetAppearance());
-    
-    return nullptr;
-}
